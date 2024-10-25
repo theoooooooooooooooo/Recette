@@ -21,6 +21,18 @@
         <main>
             <div class="container">
                 <h1>Recette</h1>
+                <?php
+                    if (!empty($_GET["Message"])){
+                        $message = $_GET['Message'];
+                        if($message == "creer"){
+                            echo "<script>alert(\"L'utilisateur à bien était créer\")</script>";
+                        } else if($message == "modif"){
+                            echo "<script>alert(\"L'utilisateur à bien était modifier\")</script>";
+                        }
+                        header("Location: index.php");
+                    }
+                ?>
+                <a name="" id="" class="btn btn-primary" href="creerRecette.php" role="button">Nouvelle recette</a>
                 <div class="table-responsive">
                     <table class="table table-primary">
                         <thead>
