@@ -6,6 +6,9 @@
     $image = $_POST["image"];
 
     $sql = "INSERT INTO Recette (nom, description, duree, image) VALUES ('$nom', '$description', $duree, '$image')";
-    $requet = $connexion->exec($sql);
-    header("Location: ../index.php?Message=creer");
+    if($connexion->exec($sql)){
+        header("Location: ../index.php?Message=creer");
+    } else {
+        echo "Erreur lors de la modification";
+    }
 ?>

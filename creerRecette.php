@@ -5,23 +5,23 @@
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
+        <link rel="stylesheet" href="style/style.css">
         <!-- Bootstrap CSS v5.2.1 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     </head>
 
     <body>
         <header>
-            <nav class="nav justify-content-center  ">
+            <!-- <nav class="nav justify-content-center  ">
                 <a class="nav-link active" href="#" aria-current="page">Active link</a>
                 <a class="nav-link" href="#">Link</a>
                 <a class="nav-link disabled" href="#">Disabled link</a>
-            </nav>
+            </nav> -->
         </header>
         <main>
             <div class="container">
                 <h1>Recette</h1>
-                <form action="control/creer.php" method="post">
+                <form action="control/creer.php" method="post" class="form-1">
                     <div class="mb-3">
                         <label for="" class="form-label">Nom</label>
                         <input type="text" class="form-control" name="nom" id="" placeboard=""/>
@@ -38,7 +38,7 @@
                         <label for="" class="form-label">Choisir une image</label>
                         <input type="file" class="form-control" name="image" id="" placeboard=""/>
                     </div>
-                    <button type="submit" class="btn btn-succees">Enregistrer</button>
+                    <button type="submit" class="btn btn-success">Enregistrer</button>
                 </form>
             </div>
         </main>

@@ -7,6 +7,9 @@
     $image = $_POST["image"];
 
     $sql = "UPDATE Recette SET nom = '$nom', description = '$description', duree = $duree, image = '$image' WHERE id = $id";
-    $requet = $connexion->exec($sql);
-    header("Location: ../index.php?Message=modif");
+    if ($connexion->exec($sql)){
+        header("Location: ../index.php?Message=modif");
+    } else {
+        echo "Erreur lors de la modification";
+    }
 ?>
